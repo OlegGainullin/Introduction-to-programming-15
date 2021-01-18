@@ -1,0 +1,33 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+float pi = M_PI;
+float RingS(float R1, float R2)
+{
+    return pi*R1*R1 - pi*R2*R2;
+}
+
+int main ()
+{
+    char *locale = setlocale(LC_ALL, "");
+    float a = 0;
+    float b = 0;
+    int answer = 0;
+    printf("Введите R1: ");
+    scanf("%e", &a);
+    printf("Введите R2: ");
+    scanf("%e", &b);
+    printf("Площадь первого кольца = %g \n", RingS(a, b));
+    printf("Введите R1: ");
+    scanf("%e", &a);
+    printf("Введите R2: ");
+    scanf("%e", &b);
+    printf("Площадь второго кольца = %g \n", RingS(a, b));
+    printf("Введите R1: ");
+    scanf("%e", &a);
+    printf("Введите R2: ");
+    scanf("%e", &b);
+    printf("Площадь третьего кольца = %g \n", RingS(a, b));
+    return 0;
+}
