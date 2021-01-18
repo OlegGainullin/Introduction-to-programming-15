@@ -1,0 +1,34 @@
+#include <stdlib.h>
+#include <math.h>
+
+float PowerA3(float a)
+{
+    return a*a*a;
+}
+
+int main ()
+{
+    char *locale = setlocale(LC_ALL, "");
+    float F1 = 0;
+    float F2 = 0;
+    float F3 = 0;
+    float F4 = 0;
+    float F5 = 0;
+    int answer = 0;
+    printf("Введите первое число: ");
+    scanf("%e", &F1);
+    printf("Введите второе число: ");
+    scanf("%e", &F2);
+    printf("Введите третье число: ");
+    scanf("%e", &F3);
+    printf("Введите четвертое число: ");
+    scanf("%e", &F4);
+    printf("Введите пятое число: ");
+    scanf("%e", &F5);
+    printf("%g ", PowerA3(F1));
+    printf("%g ", PowerA3(F2));
+    printf("%g ", PowerA3(F3));
+    printf("%g ", PowerA3(F4));
+    printf("%g ", PowerA3(F5));
+    return 0;
+}
