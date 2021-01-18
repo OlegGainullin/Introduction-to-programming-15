@@ -1,0 +1,28 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+
+int Sign(float x)
+{
+    if (x<0)
+    return -1;
+    if (x==0)
+    return 0;
+    if (x>0)
+    return 1;
+}
+
+int main ()
+{
+    char *locale = setlocale(LC_ALL, "");
+    float a = 0;
+    float b = 0;
+    int answer = 0;
+    printf("Введите A: ");
+    scanf("%e", &a);
+    printf("Введите B: ");
+    scanf("%e", &b);
+    printf("Sign(a) + Sign(b) = %d ", Sign(a)+Sign(b));
+    return 0;
+}
