@@ -1,0 +1,35 @@
+#include <stdio.h>
+#include <locale.h>
+#include <stdlib.h>
+#include <math.h>
+float pi = M_PI;
+float Fact2(int N)
+{
+    float fact = 1;
+    if (N % 2 == 1)
+    {
+        for(int i = 1; i <= N; i+= 2)
+        {
+            fact *= i;
+        }
+    }
+    if (N % 2 == 0)
+    {
+        for(int i = 2; i <= N; i+= 2)
+        {
+            fact *= i;
+        }
+    }
+    return fact;
+}
+
+int main ()
+{
+    char *locale = setlocale(LC_ALL, "");
+    float n = 0;
+    int answer = 0;
+    printf("Введите N: ");
+    scanf("%e", &n);
+    printf("N!! = %g \n", Fact2(n));
+    return 0;
+}
